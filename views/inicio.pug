@@ -1,0 +1,33 @@
+extends ./layout/index
+
+block slider
+    .slider 
+        h1 Rio de Janeiro
+        em aventura
+
+block contenido 
+    main.container.mt-5 
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisi turpis, pretium eu placerat nec, dictum tincidunt turpis. Sed diam erat, suscipit eget ex in, efficitur semper urna. 
+                p Curabitur bibendum ullamcorper eros, vitae ultricies diam tincidunt efficitur. Duis turpis massa, consectetur non faucibus nec, viverra eget ipsum. Suspendisse aliquam viverra mollis. 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+        include ./layout/bloque_viajes
+
+    .descuento 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 de Junio de 2023 - 28 de Junio de 2023
+                        p.precio Q.2,500 Quetzales
+
+    .container 
+        h2.mt-5.text-center Testimoniales
+        include ./layout/bloque_testimoniales
+
+            
