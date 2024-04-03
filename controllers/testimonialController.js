@@ -21,14 +21,7 @@ const guardarTestimonial = async (req, res) => {
 
     if (errores.length > 0) {
         // Consultar Testimoniales existentes
-        const testimoniales = await Testimonial.findAll({
-            attributes: {
-                exclude: [
-                    'createdAt',
-                    'updatedAt'
-                ]
-            }
-        })
+        const testimoniales = await Testimonial.findAll()
 
         // Mostra la vista con errores
         res.render('testimoniales', {
@@ -47,13 +40,7 @@ const guardarTestimonial = async (req, res) => {
             await Testimonial.create({
                 nombre, 
                 correo,
-                mensaje,
-                attributes: {
-                    exclude: [
-                        'createdAt',
-                        'updatedAt'
-                    ]
-                }
+                mensaje
             });
 
             res.redirect('/testimoniales')
